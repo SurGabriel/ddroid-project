@@ -13,47 +13,81 @@
     </header>
     <main>
       <div class="main-content">
-          <h3>Application Form</h3>
-              <form>
+          <h3 class="heading">Application Form</h3>
+              <form id="myForm">
                   <!--Contact Information-->
-                  <h4>Contact Information</h4>
+                  <h4 class="heading">Contact Information</h4>
                   <!--Contact Form-->
                   <div class="contact-form-container">
                       <div class="input-box">
                           <label>First Name <span class="required">*</span></label>
-                          <input type="text" placeholder="First Name">
+                          <input type="text" placeholder="First Name" id="firstName">
                       </div>
                       <div class="input-box">
-                          <label>Last Name</label>
-                          <input type="text" placeholder="Last name">
+                          <label>Last Name<span class="required">*</span></label>
+                          <input type="text" placeholder="Last name" id="lastName">
                       </div>
                       <div class="input-box">
-                          <label>Phone number</label>
-                          <input type="tel" placeholder="+40 711 111 111">
+                          <label>Phone number<span class="required">*</span></label>
+                          <input type="tel" placeholder="+40 711 111 111" id="phoneNumber">
                       </div>
                       <div class="input-box">
-                          <label>Email address</label>
-                          <input type="text" placeholder="john@doe.com">
+                          <label>Email address<span class="required">*</span></label>
+                          <input type="text" placeholder="john@doe.com" id="email">
                       </div>
                   </div>
 
                   <!--Address-->
-                  <h4>Address</h4>
+                  <h4 class="heading">Address</h4>
                   <!--Address Form-->
-                  <div>
+                  <div class="address-box">
                       <label>Address Line 1 <span class="required">*</span></label>
+                      <input type="text" placeholder="Street name & number" id="address1">
+                  </div>
+                  <div class="address-box">
+                      <label>Address Line 2</label>
                       <input type="text" placeholder="Street name & number">
                   </div>
-                  <div>
-                      <label>Address Line 2 <span class="required">*</span></label>
-                      <input type="text" placeholder="Street name & number">
+                  <div class="api">
+                        <div class="api-items">
+                            <label>Country<span class="required">*</span></label>
+                            <select>
+                                <option>Romania</option>
+                                <option>Bulgaria</option>
+                                <option>Greece</option>
+                            </select>
+                        </div>
+                        <div class="api-items">
+                            <label>State</label>
+                            <select>
+                                <option>Optiune</option>
+                            </select>
+                        </div>
+                        <div class="api-items">
+                            <label id="City">City<span class="required">*</span></label>
+                            <select>
+                                <option>Iasi</option>
+                                <option>Bucuresti</option>
+                                <option>Cluj</option>
+                            </select>
+                        </div>
                   </div>
                   <!--Errors & Button-->
-                  <div>
+                  <div class="submit">
                       <!--Errors-->
-                      <div></div>
+                      <div class="errors" id="errorMessages">
+                        <p>Please fix the following errors to proceed:</p>
+                        <ul>
+                            <li>First name is required</li>
+                            <li>Last name is required</li>
+                            <li>Wrong phone number format</li>
+                            <li>Email is required</li>
+                            <li>Address is required</li>
+                            <li>City is required</li>
+                        </ul>
+                      </div>
                       <!--Submit Button-->
-                      <div></div>
+                      <div><button class="join">Join us</button></div>
                   </div>
 
               </form>
@@ -61,9 +95,14 @@
       </div>
     </main>
     <footer>
-
+        <div class="footer">
+            <div><p class="h-footer">Come to the dark side... we have</p></div>
+            <div>
+              <img src="../public/Resurse/imagini/cookies.png" class="cookie" alt="cookie-icon" />
+            </div>
+          </div>
     </footer>
 
-  <script type="module" src="/main.js"></script>
+  <script type="module" src="/form-page-script.js"></script>
 </body>
 </html>
